@@ -34,26 +34,26 @@ blah, blah, blah, blah
 
 
 <script>
-        var allergy_count = 0;
-        var cold_count = 0;
+        var late_count = 0;
+        var prego_count = 0;
 	var resultText = document.getElementById("results");
 	
 	
-        function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert("allergy count: " + allergy_count);
+        function lateAdd(){
+            late_count = late_count + 1;
+		alert("late count: " + latee_count);
         }
 
-        function coldAdd(){
-            cold_count = cold_count + 1;
-		alert("cold count: " + cold_count);
+        function pregoAdd(){
+            prego_count = prego_count + 1;
+		alert("prego count: " + pregeo_count);
         }
 	
 	function results(){
-		var allergyPercent = allergy_count/ (allergy_count + cold_count) * 100;  <!--calculations for allergies-->
-		var coldPercent = cold_count/ (allergy_count + cold_count) * 100;	<!--calculations for cold-->
+		var latePercent = late_count/ (late_count + prego_count) * 100;  <!--calculations for allergies-->
+		var pregoPercent = prego_count/ (late_count + prego_count) * 100;	<!--calculations for cold-->
 		var resultText = document.getElementById("results");		<!--shows results-->
-		resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "%<br> Probability it is a cold=" + coldPercent + "%";
+		resultText.innerHTML = "Probability it is you're late =" + latePercent + "%<br> Probability it is you're pregnant=" + pregoPercent + "%";
 		
 	}
 
@@ -89,7 +89,7 @@ blah, blah, blah, blah
 </div>
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might be pregnant but wonder if it you're period is just late? Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
