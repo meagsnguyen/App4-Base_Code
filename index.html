@@ -40,20 +40,20 @@ blah, blah, blah, blah
 	
 	
         function lateAdd(){
-            late_count = late_count + 1;
-		alert("late count: " + latee_count);
+            late_count = late_count + 1;	<!-- changed to late period to match questions -->
+		alert("late count: " + late_count);
         }
 
         function pregoAdd(){
-            prego_count = prego_count + 1;
+            prego_count = prego_count + 1;	<!-- changed to prego to match questions -->
 		alert("prego count: " + pregeo_count);
         }
 	
 	function results(){
-		var latePercent = late_count/ (late_count + prego_count) * 100;  <!--calculations for allergies-->
-		var pregoPercent = prego_count/ (late_count + prego_count) * 100;	<!--calculations for cold-->
+		var latePercent = late_count/ (late_count + prego_count) * 100;  <!--calculations for -->
+		var pregoPercent = prego_count/ (late_count + prego_count) * 100;	<!--calculations for pregnancy-->
 		var resultText = document.getElementById("results");		<!--shows results-->
-		resultText.innerHTML = "Probability it is you're late =" + latePercent + "%<br> Probability it is you're pregnant=" + pregoPercent + "%";
+		resultText.innerHTML = "Probability it is you're peeriod is late =" + latePercent + "%<br> Probability it is you're pregnant=" + pregoPercent + "%";
 		
 	}
 
@@ -85,7 +85,7 @@ blah, blah, blah, blah
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Late period or pregnant?</h1>
 </div>
 	
 <div id="content" class="w3-container">
@@ -103,9 +103,9 @@ blah, blah, blah, blah
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>Are your eyes itchy or watery?</p> 
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black"> No</a>		<!--buttons that adds to calculations when chosen and goes into next page-->
+        <p>Is your period more than a month late?</p> 
+		<a href="#two"  onclick="pregoAdd();" class="w3-btn w3-black"> Yes</a>		<!--pregnant corresponds to yes-->
+         	<a href="#two"  onclick="lateAdd();" class="w3-btn w3-black"> No</a>		<!--buttons that adds to calculations when chosen and goes into next page-->
 
     	</div>
 </div>
@@ -116,9 +116,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Do you have a fever?</p>
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>		<!--swiched yes to cold because of data-->
-         	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> No</a>
+		<p>Have you been having unprotected sexual activities?</p>
+		<a href="#three"  onclick="pregoAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes for questions leads to pregnancy because unprotected-->		
+         	<a href="#three"  onclick="alateAdd();" class="w3-btn w3-black"> No</a>
 	</div>
 </div>	
 	
