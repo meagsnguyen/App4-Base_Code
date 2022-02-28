@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The purpose of this code is to determine thep possibility whether you're period is late or pregnant.
  
 Known Issues:
-blah, blah, blah, blah
+It was difficult to think of new questions that differentiate between the two reasonings. Also
 -->
 
    <head> 
@@ -38,15 +38,20 @@ blah, blah, blah, blah
         var prego_count = 0;
 	var resultText = document.getElementById("results");
 	
+	// variable counts help in the functions that calculate the survey to deetermine the results of the survey
 	
         function lateAdd(){
             late_count = late_count + 1;	<!-- changed to late period to match questions -->
 		alert("late count: " + late_count);
+		
+	// lateAdd adds to the latecount if the user chooses yes, this is a key function in the calculationso of the percentage
         }
 
         function pregoAdd(){
             prego_count = prego_count + 1;	<!-- changed to prego to match questions -->
 		alert("prego count: " + prego_count);
+		
+	// pregoAdd adds to the pregocount if the user chooses yes, this is a key function in the calculationso of the percentage
         }
 	
 	function results(){
@@ -55,6 +60,7 @@ blah, blah, blah, blah
 		var resultText = document.getElementById("results");		<!--shows results-->
 		resultText.innerHTML = "Probability it is you're period is late =" + latePercent + "%<br> Probability it is you're pregnant=" + pregoPercent + "%";
 		
+	//function results shows the results of the survey to convey whether the user's period is late or pregnant
 }
 
   </script>
@@ -95,6 +101,8 @@ blah, blah, blah, blah
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
 	<h1>Late period or pregnant?</h1>
+	
+<!-- h1 shows the user what the survey is about, which is about whether your period is late or they are pregnant-->
 </div>
 	
 <div id="content" class="w3-container">
@@ -108,14 +116,14 @@ blah, blah, blah, blah
 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
-		<h1>Question 1</h1>
+		<h1>Question 1</h1> <!-- header 1 shows the first question so the user can know what the question is about, this coding setup was based off of app 3-->
 	</div>
 	
     	<div id="content" class="w3-container">
         <p>Is your period more than a month late?</p> 
 		<a href="#two"  onclick="pregoAdd();" class="w3-btn w3-black"> Yes</a>		<!--pregnant corresponds to yes-->
          	<a href="#two"  onclick="lateAdd();" class="w3-btn w3-black"> No</a>		<!--buttons that adds to calculations when chosen and goes into next page-->
-
+		<!-- this section was copied from the last app (app 3) to provide a base to the code and set up the pages, buttons, question, and calculation var-->
     	</div>
 </div>
 
@@ -124,6 +132,7 @@ blah, blah, blah, blah
 		<h1>Question 2</h1>	<!-- changed to question 2 to represent new question -->
 	</div>
 	
+	<!-- question 2 asks if they have had unprotected sexual activities, if so then they are at risk of being pregant-->
 	<div id="content" class="w3-container">
 		<p>Have you been having unprotected sexual activities?</p>
 		<a href="#three"  onclick="pregoAdd();" class="w3-btn w3-black"> Yes</a> <!-- yes for questions leads to pregnancy because unprotected-->		
@@ -135,6 +144,7 @@ blah, blah, blah, blah
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>	<!-- changed to question # to represent new question -->
 	</div>
+	<!-- question 3 asks if they have had secual activities, if not then it is impossible for them to be pregnant-->
 	
 	<div id="content" class="w3-container">
 		<p>Have you ever had intercourse?</p>
@@ -166,9 +176,9 @@ blah, blah, blah, blah
 	</div>
 	
 	<div id="content" class="w3-container">
-		<p>Are you experiencing nausea?</p>		<!-- new question supporting pregnancy-->
+		<p>Are you experiencing nausea?</p>		<!-- new question supporting pregnancy if you are nauseous then it usually will go alongside pregnancy -->
 		<a href="#six"  onclick="lateAdd();" class="w3-btn w3-black"> Yes</a>	<!--switched onclick to match data questions-->
-         	<a href="#six"  onclick="pregoAdd();" class="w3-btn w3-black"> No</a>
+         	<a href="#six"  onclick="pregoAdd();" class="w3-btn w3-black"> No</a>   
 	</div>
 </div>	
 	
@@ -182,6 +192,7 @@ blah, blah, blah, blah
 		<div id="content" class="w3-container">
 		<a onclick="results();" class="w3-btn w3-black">Click here to view results</a>  <!--button that shows results-->
 		<p id="results"></p>
+	<!-- the onclick lets the system know to show the results from the results function, showcasing the percentages that were caluclated from the var and functions-->
 
 	</div>
 </div>
